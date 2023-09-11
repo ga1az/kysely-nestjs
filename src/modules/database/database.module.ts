@@ -3,7 +3,7 @@ import { Database, DatabaseOptions } from './database';
 import {
   ConfigurableDatabaseModule,
   DATABASE_OPTIONS,
-} from './database.module-definition';
+} from './database.moduleDefinition';
 import { PostgresDialect } from 'kysely';
 import { Pool } from 'pg';
 
@@ -24,7 +24,6 @@ import { Pool } from 'pg';
             database: databaseOptions.database,
           }),
         });
-        console.log('dialect created');
         return new Database({ dialect });
       },
     },

@@ -1,16 +1,18 @@
 import { Kysely } from 'kysely';
+import { Company, CompanyFeature, Feature, Pricing } from '../company/entity';
+import { User } from '../user/entity/user.entity';
+import { Menu } from '../menu/entity/menu.entity';
+import { Category } from '../category/entity/category.entity';
 
 // Add your tables here.
 interface Tables {
-  // Example:
-  // users: {
-  //   id: number;
-  //   name: string;
-  //   email: string;
-  //   password: string;
-  //   created_at: Date;
-  //   updated_at: Date;
-  // };
+  company: Company;
+  feature: Feature;
+  company_feature: CompanyFeature;
+  pricing: Pricing;
+  user: User;
+  menu: Menu;
+  menu_category: Category;
 }
 
 export interface DatabaseOptions {
